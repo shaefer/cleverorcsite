@@ -1,21 +1,68 @@
-.flex-container {
+/*https://css-tricks.com/dont-overthink-flexbox-grids/*/
+.flex-grid {
   display: flex;
 }
-
-.flex-item {
-  flex: 4;
-  order: 2;
+.flex-grid .col {
+  flex: 1;
+}
+.flex-grid-thirds .col {
+  width: 32%;
 }
 
-.flex-item:nth-child(2) {
-  order: 1;
-  background-color: grey;
-  flex: 1;
+.flex-grid .leftside, .flex-grid .rightside {
+  flex: 0.5
+}
+
+* {
+  box-sizing: border-box;
+}
+.col {
+  padding: 20px;
+}
+
+.sidebar.leftside, .sidebar.rightside {
+  background-color: #68B04D;
+}
+
+.col.center {
+  background-color: #1C8A43;
+}
+
+.co_content {
+  border: 1px solid red;
+  background: darkslategrey url('/images/froghemoth__eric_quigley.png') no-repeat fixed center;
+  background-size: cover; /*70%?*/
+  background-position: 50% 50%;
+  height: 100vh;
+  margin-bottom: 60px;
+}
+
+.maincontent {
+  flex-direction: column;
+}
+
+header, footer {
   text-align: center;
 }
 
-@media screen and (max-width:640px) {
-  .flex-container { flex-wrap: wrap;  }
-  .flex-item:first-child { flex-basis: 100%; }
-  .flex-item:nth-child(2) { text-align:left }
+footer {
+  position: fixed;
+  left:0px;
+  bottom:0px;
+  width: 100%;
+  height: 60px;
 }
+
+@media screen and (max-width:640px) {
+  .flex-grid .sidebar {
+    flex: 0.03
+  }
+
+  .col.leftside, .col.rightside {
+    display: none;
+  }
+  .co_content {
+    background-size: cover;
+  }
+}
+

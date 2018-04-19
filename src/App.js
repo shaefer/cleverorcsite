@@ -26,14 +26,28 @@ class App extends Component {
     console.log(config.initialState);
     console.log(layout.initialLayout);
     return (
-      <div className="flex-container">
-        <div className="flex-item">
-          One Area
+      <main>
+      <header class="flex-grid co_header">
+        <div class="sidebar leftside"></div>
+        <div class="col center">
+          <div>Clever Orc</div>
+          <div>RPG Tools for Everyone</div>
         </div>
-        <div className="flex-item">
-          Two Area
-        </div>
-    </div>
+        <div class="sidebar rightside"></div>
+      </header>
+
+      <div class="flex-grid co_content">
+        <div class="col leftside">Left Col</div>
+        <div class="col maincontent">Main Content</div>
+        <div class="col rightside">Right Col</div>
+      </div>
+
+      <footer class="flex-grid co_footer">
+        <div class="sidebar leftside"></div>
+        <div class="col center">Main Footer</div>
+        <div class="sidebar rightside"></div>
+      </footer>
+      </main>
     );
   }
 }
