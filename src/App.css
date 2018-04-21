@@ -31,7 +31,6 @@
 }
 
 .co_content {
-  border: 1px solid red;
   background: darkslategrey url('/images/froghemoth__eric_quigley.png') no-repeat fixed center;
   background-size: cover; /*70%?*/
   background-position: 50% 50%;
@@ -47,7 +46,14 @@ header, footer {
   text-align: center;
 }
 
-footer {
+header.fixed {
+  position: fixed;
+  left:0px;
+  top:0px;
+  width: 100%;
+}
+
+footer.fixed {
   position: fixed;
   left:0px;
   bottom:0px;
@@ -79,6 +85,11 @@ footer {
   }
   .co_content {
     background-size: cover;
+  }
+
+  header.fixed {
+    position: relative;
+    height: inherit;
   }
 }
 

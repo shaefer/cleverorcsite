@@ -21,13 +21,16 @@ class App extends Component {
     document.removeEventListener('keydown', this.handleKeyPress);
   }
 
+//http://linxtion.com/demo/react-image-gallery/
+//https://github.com/Pau1fitz/react-slidez
+
   render() {
     const { config, layout } = this.props;
     console.log(config.initialState);
     console.log(layout.initialLayout);
     return (
       <main>
-      <header class="flex-grid co_header">
+      <header class="flex-grid co_header fixed">
         <div class="sidebar leftside"></div>
         <div class="col center">
           <div class="mainTitle">Clever Orc</div>
@@ -42,7 +45,7 @@ class App extends Component {
         <div class="col rightside">Right Col</div>
       </div>
 
-      <footer class="flex-grid co_footer">
+      <footer class="flex-grid co_footer fixed">
         <div class="sidebar leftside"></div>
         <div class="col center">Main Footer</div>
         <div class="sidebar rightside"></div>
