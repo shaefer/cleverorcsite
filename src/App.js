@@ -30,8 +30,8 @@ class App extends Component {
       <header class="flex-grid co_header">
         <div class="sidebar leftside"></div>
         <div class="col center">
-          <div>Clever Orc</div>
-          <div>RPG Tools for Everyone</div>
+          <div class="mainTitle">Clever Orc</div>
+          <div class="secondaryTitle">RPG Tools for Everyone</div>
         </div>
         <div class="sidebar rightside"></div>
       </header>
