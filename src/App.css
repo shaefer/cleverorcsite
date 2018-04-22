@@ -61,12 +61,18 @@ footer.fixed {
   height: 60px;
 }
 
+footer.co_footer {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
 .mainTitle {
   font-family: 'Playfair Display', serif;
   letter-spacing: 2px;
   line-height: 1;
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 2.3em;
+  font-weight: bold;
+  padding-bottom: 10px;
 }
 .secondaryTitle {
   font-family: 'Julius Sans One', sans-serif;
@@ -90,6 +96,18 @@ footer.fixed {
   header.fixed {
     position: relative;
     height: inherit;
+  }
+
+  .mainTitle {
+    font-size: 2em;
+  }
+
+  .secondaryTitle {
+      font-size: 1em;
+  }
+
+  footer.co_footer {
+    font-size: 0.8em;
   }
 }
 

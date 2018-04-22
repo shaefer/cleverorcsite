@@ -47,7 +47,7 @@ class App extends Component {
 
       <footer class="flex-grid co_footer fixed">
         <div class="sidebar leftside"></div>
-        <div class="col center">Main Footer</div>
+        <div class="col center">&copy; Copyright 2018 Clever Orc Games.</div>
         <div class="sidebar rightside"></div>
       </footer>
       </main>
