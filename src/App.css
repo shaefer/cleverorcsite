@@ -22,6 +22,10 @@
   padding: 20px;
 }
 
+.col.nopadding {
+  padding: 0;
+}
+
 .sidebar.leftside, .sidebar.rightside {
   background-color: #68B04D;
 }
@@ -46,7 +50,7 @@ header, footer {
   text-align: center;
 }
 
-header.fixed {
+header.fixed, div.fixed {
   position: fixed;
   left:0px;
   top:0px;
@@ -81,6 +85,15 @@ footer.co_footer {
   color: white;
   font-size: 1.3em;
 }
+
+.sm-only {
+  display:none;
+}
+
+.lg-only {
+  display: inherit;
+}
+
 @media screen and (max-width:640px) {
   .flex-grid .sidebar {
     flex: 0.03
@@ -96,6 +109,7 @@ footer.co_footer {
   header.fixed {
     position: relative;
     height: inherit;
+    margin-top: 40px; /*margin for fixed nav bar*/
   }
 
   .mainTitle {
@@ -108,6 +122,14 @@ footer.co_footer {
 
   footer.co_footer {
     font-size: 0.8em;
+  }
+
+  .sm-only {
+    display: inherit;
+  }
+
+  .lg-only {
+    display:none;
   }
 }
 
