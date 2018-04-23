@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import './CleverOrc.css';
 import './Nav.css';
 import { connect } from 'react-redux'
 import {keyPressHandler} from './action-creators'
@@ -28,14 +27,11 @@ class App extends Component {
 //https://github.com/Pau1fitz/react-slidez errors on basic setup. No community.
 //https://www.npmjs.com/package/react-touch-carousel
 
-
-//Layout
-//https://stackoverflow.com/questions/12489909/how-to-have-a-3-column-layout-with-fixed-left-right-fluid-middle-and-fixed-foot
-
   render() {
     const { config, layout } = this.props;
     console.log(config.initialState);
     console.log(layout.initialLayout);
+
     const menuItems = (
       <ul>
         <li class=""><a href="http://monsters.cleverorc.com">Pathfinder Monster Finder</a></li>
@@ -50,49 +46,47 @@ class App extends Component {
       </nav>
     );
     const condensedNavBar = (
-      <nav class="nav center sm-only">
-        {menuItems}
-      </nav>
-    );
-    const headerContent = (
-      <div class="headerContent">
-        {condensedNavBar}
-        <div class="mainTitle">Clever Orc</div>
-        <div class="secondaryTitle">RPG Tools for Everyone</div>
-        {fullSizedNavBar}
-      </div>
-    );
-    const footerContent = (
-      <div class="footerContent">&copy; Copyright 2018 Clever Orc Games.</div>
-    );
-    const mainContent = (
-      <div class="mainContentBackground">
-        <CleverCarousel></CleverCarousel>
+      <div class="flex-grid co_header fixed sm-only">
+        <div class="col center nopadding">
+          <nav class="nav center">
+            {menuItems}
+          </nav>
+        </div>
       </div>
     );
 
-
-
-
+    const slides = [
+      <div>Main Content 1</div>,
+      <div>Slide 2</div>,
+      <div>Yet another slide</div>
+    ];
     return (
       <main>
-        <header>
-          <div class="left"></div>
-          <div class="right"></div>
-          <div class="center">
-              {headerContent}
-          </div>
-        </header>
-        <section class="mainContentContainer">
-          {mainContent}
-        </section>
-        <footer class="footer">
-          <div class="left"></div>
-          <div class="right"></div>
-          <div class="center">
-              {footerContent}
-          </div>
-        </footer>​
+      <header class="flex-grid co_header fixed">
+        <div class="sidebar leftside"></div>
+        <div class="col center nopadding">
+          <div class="mainTitle">Clever Orc</div>
+          <div class="secondaryTitle">RPG Tools for Everyone</div>
+          {fullSizedNavBar}
+        </div>
+        <div class="sidebar rightside"></div>
+      </header>
+
+     {condensedNavBar}
+      
+      <div class="flex-grid co_content">
+        <div class="col leftside">Left Col</div>
+        <div class="col maincontent nopadding">
+          <CleverCarousel></CleverCarousel>
+        </div>
+        <div class="col rightside">Right Col</div>
+      </div>
+
+      <footer class="flex-grid co_footer fixed">
+        <div class="sidebar leftside"></div>
+        <div class="col center">&copy; Copyright 2018 Clever Orc Games.</div>
+        <div class="sidebar rightside"></div>
+      </footer>
       </main>
     );
   }

@@ -1,135 +1,67 @@
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Playfair+Display');
+* {margin: 0; padding: 0} /* reset */
+html, body {
+    height: 100%;            
+}
+body {
+    border-bottom: 60px solid; /* footer height */
+    box-sizing: border-box; /* paulirish.com/2012/box-sizing-border-box-ftw/ */
+}
 
-/*https://css-tricks.com/dont-overthink-flexbox-grids/*/
-.flex-grid {
+.left {
+    width: 20%;
+    background: plum;
+    float: left;
+    min-height: 139px; /* Matches the measured min height of the center header */
+}
+
+.right {
+    width:20%;
+    background: skyblue;
+    float: right;
+    min-height: 139px;  /* Matches the measured min height of the center header */
+}
+
+.center {
+    overflow: hidden;
+    background: teal;
+
+}
+
+.mainContentContainer {
   display: flex;
+  flex-direction: column;
+  height: 100%;
+
 }
-.flex-grid .col {
+
+.mainContentContainer > div {
   flex: 1;
-}
-.flex-grid-thirds .col {
-  width: 32%;
-}
-
-.flex-grid .leftside, .flex-grid .rightside {
-  flex: 0.5
-}
-
-* {
-  box-sizing: border-box;
-}
-.col {
-  padding: 20px;
-}
-
-.col.nopadding {
-  padding: 0;
-}
-
-.sidebar.leftside, .sidebar.rightside {
-  background-color: #68B04D;
-}
-
-.col.center {
-  background-color: #1C8A43;
-}
-
-.co_content {
-  background: darkslategrey url('/images/froghemoth__eric_quigley.png') no-repeat fixed center;
-  background-size: cover; /*70%?*/
-  background-position: 50% 50%;
-  height: 100vh;
-  margin-bottom: 60px;
-}
-
-.maincontent {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
 }
-
-header, footer {
-  text-align: center;
+    
+/* for preview purposes */
+.left, .right, .center {
+    height: 100%;
+   /* overflow: auto; */
 }
 
-header.fixed, div.fixed {
-  position: fixed;
-  left:0px;
-  top:0px;
-  width: 100%;
-}
-
-footer.fixed {
-  position: fixed;
-  left:0px;
-  bottom:0px;
-  width: 100%;
-  height: 60px;
-}
-
-footer.co_footer {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-.mainTitle {
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 2px;
-  line-height: 1;
-  text-transform: uppercase;
-  font-size: 2.3em;
-  font-weight: bold;
-  padding-bottom: 10px;
-}
-.secondaryTitle {
-  font-family: 'Julius Sans One', sans-serif;
-  letter-spacing: 10px;
-  line-height: 1.4;
-  color: white;
-  font-size: 1.3em;
-}
-
-.sm-only {
-  display:none;
-}
-
-.lg-only {
-  display: inherit;
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    height: 60px; /* set matching body property to this footer height */
+    background: #333;
+    
+    color: white;
 }
 
 @media screen and (max-width:640px) {
-  .flex-grid .sidebar {
-    flex: 0.03
-  }
-
-  .col.leftside, .col.rightside {
-    display: none;
-  }
-  .co_content {
-    background-size: cover;
-  }
-
-  header.fixed {
-    position: relative;
-    height: inherit;
-    margin-top: 40px; /*margin for fixed nav bar*/
-  }
-
-  .mainTitle {
-    font-size: 2em;
-  }
-
-  .secondaryTitle {
-      font-size: 1em;
-  }
-
-  footer.co_footer {
-    font-size: 0.8em;
-  }
-
-  .sm-only {
-    display: inherit;
-  }
-
-  .lg-only {
-    display:none;
+  .left, .right {
+    width: 2%;
+    min-height: 185px;
   }
 }
-
