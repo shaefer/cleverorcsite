@@ -33,9 +33,9 @@ class App extends Component {
     const menuItems = (
       <ul>
         <li class=""><a href="http://monsters.cleverorc.com">Pathfinder Monster Finder</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Test</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class=""><a href="http://www.monsteradvancer.com">Monster Advancer Tools</a></li>
+        <li class=""><a href="#">Contact</a></li>
+        <li class=""><a href="#">About</a></li>
       </ul>
     );
     const fullSizedNavBar = (
