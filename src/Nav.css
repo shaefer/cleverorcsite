@@ -83,10 +83,7 @@
 		margin-left: 32px;
 		padding: 5px 5px 5px 5px;
 	}
-	.nav ul:hover li:first-child a {
-		margin-left: 0;
-		padding: 5px 5px 5px 32px;
-    }
+
 	.nav a {
 		display: block;
 		padding: 5px 5px 5px 32px;
