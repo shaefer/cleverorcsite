@@ -67,7 +67,9 @@ class App extends Component {
     );
     const mainContent = (
       <div class="mainContentBackground">
-        <CleverCarousel></CleverCarousel>
+        <div class="mainContent centered">
+          <CleverCarousel></CleverCarousel>
+        </div>
       </div>
     );
 

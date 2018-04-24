@@ -14,7 +14,7 @@ html, body {
   
   .carousel-container {
     position: relative;
-    height: 300px;
+    height: 400px;
     max-width: 1960px;
     margin: 0 auto;
     overflow: hidden;
@@ -27,7 +27,7 @@ html, body {
   }
   
   .carousel-card {
-    flex: 0 0 500px;
+    flex: 0 0 500px; /*This amount is based off the width of the cards */
     height: 100%;
     display: flex;
     justify-content: center;
@@ -41,7 +41,7 @@ html, body {
   .carousel-card-inner {
     flex-direction: column;
     width: 490px;
-    height: 290px;
+    height: 390px;
     border-radius: 5px;
   }
   
@@ -91,6 +91,7 @@ html, body {
 @media screen and (max-width:640px) {
   .carousel-container {
       overflow: auto;
+      height: 300px;
   }
       
   .carousel-card {
@@ -99,5 +100,6 @@ html, body {
   
   .carousel-card-inner {
     width: 290px;
+    height: 290px;
   }
 }
