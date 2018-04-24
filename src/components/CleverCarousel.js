@@ -7,9 +7,11 @@ import './CleverCarousel.css'
 
 const enableLoop = true;
 const enableAutoplay = false;
-const cardSize = 300
+const cardSize = window.innerWidth < 640 ? 300 : 500;
+//const cardSize = 500 /*probably needs read from css? or deterministically guessed based on programmed responsive fallbacks*/
 const cardPadCount = enableLoop ? 10 : 0
-const carouselWidth = clamp(window.innerWidth, 0, 960)
+//const carouselWidth = clamp(window.innerWidth, 0, 960)
+const carouselWidth = window.innerWidth; /*our width is basically 100%*/
 
 function log (text) {
   console.log(text);

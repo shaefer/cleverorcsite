@@ -33,12 +33,12 @@ const slides = [
     },
     {
       title: 'Card 5',
-      background: '#29c53c',
+      background: 'rgba(41, 197, 60, 0.6)',
       text: 'react-touch-carousel is released under MIT license'
     },
     {
       title: 'Card 6',
-      background: 'orange',
+      background: 'rgba(238,102,17,0.6)',
       text: 'react-touch-carousel is released under MIT license'
     }
   ]
