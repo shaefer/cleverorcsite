@@ -20,6 +20,7 @@
     background: darkslategrey url('/images/froghemoth__eric_quigley.png') no-repeat fixed center;
     background-size: cover; /*70%?*/
     background-position: 50% 50%;
+    height: 100%;
 }
 
   .headerContent {

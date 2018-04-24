@@ -8,7 +8,7 @@ import './CleverCarousel.css'
 const enableLoop = true;
 const enableAutoplay = false;
 const cardSize = 300
-const cardPadCount = enableLoop ? 3 : 0
+const cardPadCount = enableLoop ? 10 : 0
 const carouselWidth = clamp(window.innerWidth, 0, 960)
 
 function log (text) {

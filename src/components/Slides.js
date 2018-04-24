@@ -35,6 +35,11 @@ const slides = [
       title: 'Card 5',
       background: '#29c53c',
       text: 'react-touch-carousel is released under MIT license'
+    },
+    {
+      title: 'Card 6',
+      background: 'orange',
+      text: 'react-touch-carousel is released under MIT license'
     }
   ]
   

@@ -1,5 +1,5 @@
 * {margin: 0; padding: 0} /* reset */
-html, body {
+html, body, div#root {
     height: 100%;            
 }
 body {
@@ -24,21 +24,21 @@ body {
 .center {
     overflow: hidden;
     background: teal;
+}
 
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex: 0;
 }
 
 .mainContentContainer {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-
-}
-
-.mainContentContainer > div {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+    flex: 1;
+    margin-bottom: -18px; /*Weird gap after flex items*/
 }
     
 /* for preview purposes */
