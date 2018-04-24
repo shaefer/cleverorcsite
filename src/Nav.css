@@ -46,7 +46,7 @@
 }
 
 /* center nav */
-.nav.center ul {
+.nav.navcenter ul {
 	text-align: center;
 }
 
@@ -77,12 +77,21 @@
         display: block; /* show first <li> item ...setup to use the first-child rather than current class */
         border: 0;
         padding: 0 5px;
+	}
+	
+	.nav li:first-child a {
+		margin-left: 32px;
+		padding: 5px 5px 5px 5px;
+	}
+	.nav ul:hover li:first-child a {
+		margin-left: 0;
+		padding: 5px 5px 5px 32px;
     }
 	.nav a {
 		display: block;
 		padding: 5px 5px 5px 32px;
         text-align: left;
-        color: black;
+		color: black;
 	}
 
 	/* on nav hover */
@@ -101,7 +110,7 @@
 	}
 
 	/* center nav */
-	.nav.center ul {
+	.nav.navcenter ul {
 		left: 50%;
 		margin-left: -150px;
 	}	

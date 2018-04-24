@@ -45,12 +45,12 @@ class App extends Component {
       </ul>
     );
     const fullSizedNavBar = (
-      <nav class="nav center lg-only">
+      <nav class="nav navcenter lg-only">
         {menuItems}
       </nav>
     );
     const condensedNavBar = (
-      <nav class="nav center sm-only">
+      <nav class="nav navcenter sm-only">
         {menuItems}
       </nav>
     );
