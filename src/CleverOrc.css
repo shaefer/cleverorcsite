@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Playfair+Display');
+@import url('//cdn-images.mailchimp.com/embedcode/classic-10_7.css');
 .mainTitle {
     font-family: 'Playfair Display', serif;
     letter-spacing: 2px;
@@ -61,4 +62,14 @@
       .lg-only {
         display:none;
       }
+  }
+
+  /*Mail Chimp*/
+  #mc_embed_signup h2 {
+      padding: 5px;
+      margin: 0;
+  }
+
+  #mc_embed_signup {
+      font-size: 12px;
   }

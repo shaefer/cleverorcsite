@@ -54,6 +54,8 @@ const Container = touchWithMouseHOC(CarouselContainer)
 class CleverCarousel extends Component {
     renderCard (index, modIndex) {
       const item = data[modIndex]
+      const title = item.title ? <div className='carousel-title'>{item.title}</div> : "";
+      const content = item.text ? <div className='carousel-text'>{item.text}</div> : item.jsx;
       return (
         <div
           key={index}
@@ -64,8 +66,8 @@ class CleverCarousel extends Component {
             className='carousel-card-inner'
             style={{backgroundColor: item.background}}
           >
-            <div className='carousel-title'>{item.title}</div>
-            <div className='carousel-text'>{item.text}</div>
+            {title}
+            {content}
           </div>
         </div>
       )

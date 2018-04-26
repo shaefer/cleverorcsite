@@ -44,16 +44,8 @@ class App extends Component {
         <li class=""><a href="#">About</a></li>
       </ul>
     );
-    const fullSizedNavBar = (
-      <nav class="nav navcenter lg-only">
-        {menuItems}
-      </nav>
-    );
-    const condensedNavBar = (
-      <nav class="nav navcenter sm-only">
-        {menuItems}
-      </nav>
-    );
+    const fullSizedNavBar = <nav class="nav navcenter lg-only">{menuItems}</nav>;
+    const condensedNavBar = <nav class="nav navcenter sm-only">{menuItems}</nav>;
     const headerContent = (
       <div class="headerContent">
         {condensedNavBar}
@@ -62,9 +54,7 @@ class App extends Component {
         {fullSizedNavBar}
       </div>
     );
-    const footerContent = (
-      <div class="footerContent">&copy; Copyright 2018 Clever Orc Games.</div>
-    );
+    const footerContent = <div class="footerContent">&copy; Copyright 2018 Clever Orc Games.</div>;
     const mainContent = (
       <div class="mainContentBackground">
         <div class="mainContent centered">
