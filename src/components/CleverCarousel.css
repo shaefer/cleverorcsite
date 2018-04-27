@@ -36,6 +36,7 @@ html, body {
     font-weight: bold;
     color: white;
     -webkit-tap-highlight-color: transparent;
+    font-family: 'Roboto', sans-serif; 
   }
   
   .carousel-card-inner {
@@ -51,7 +52,7 @@ html, body {
   }
   
   .carousel-text {
-    padding: 1em;
+    padding: 1em 3em;
     font-size: 14px;
     white-space: pre-wrap;
     text-align: left;

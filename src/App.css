@@ -3,7 +3,6 @@ html, body, div#root {
     height: 100%;            
 }
 body {
-    border-bottom: 60px solid; /* footer height */
     box-sizing: border-box; /* paulirish.com/2012/box-sizing-border-box-ftw/ */
 }
 
@@ -53,7 +52,6 @@ header {
     left: 0;
     right: 0;
     
-    height: 60px; /* set matching body property to this footer height */
     background: #333;
     
     color: white;
