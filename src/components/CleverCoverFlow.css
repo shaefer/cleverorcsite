@@ -1,0 +1,10 @@
+/*Need higher specificity*/
+div.greenSlide {
+    padding: 20px;
+    color: white;
+    
+}
+
+.greenSlideTitle {
+    text-align: center;
+}

@@ -17,12 +17,17 @@ function log (text) {
   console.log(text);
 }
 
-function CarouselContainer (props) {
+function CarouselContainer (props, indexToSet) {
   const {cursor, carouselState: {active, dragging}, ...rest} = props
+  console.log("Carousel Container")
+  console.log(props)
+  console.log(indexToSet)
   let current = -Math.round(cursor) % data.length
   while (current < 0) {
     current += data.length
   }
+  if (indexToSet)
+    current = indexToSet
   // Put current card at center
   const translateX = (cursor - cardPadCount) * cardSize + (carouselWidth - cardSize) / 2
   const isActive = active ? 'is-active: ' + active : "";
@@ -49,7 +54,7 @@ function CarouselContainer (props) {
   )
 }
 
-const Container = touchWithMouseHOC(CarouselContainer)
+
 
 class CleverCarousel extends Component {
     renderCard (index, modIndex) {
@@ -74,8 +79,18 @@ class CleverCarousel extends Component {
     }
   
     render () {
+      console.log("RENDERING CAROUSEL")
+      console.log(this.props)
+      console.log("Set index to " + this.props.controls.currentItem)
+    
+      const WrappedContainer = (props) => {
+        return CarouselContainer(props, this.props.controls.currentItem);
+      }
+      const Container = touchWithMouseHOC(WrappedContainer)
       return (
         <TouchCarousel
+          index={this.props.currentItem}
+          cursor={this.props.currentItem}
           component={Container}
           cardSize={cardSize}
           cardCount={data.length}

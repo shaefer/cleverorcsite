@@ -3,17 +3,23 @@ import './App.css';
 import './CleverOrc.css';
 import './Nav.css';
 import { connect } from 'react-redux'
-import {keyPressHandler} from './action-creators'
+import {keyPressHandler, contactSelectedHandler} from './action-creators'
 import CleverCarousel from './components/CleverCarousel'
+import CleverCoverFlow from './components/CleverCoverFlow'
 
 class App extends Component {
   constructor() {
     super();
     this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.handleContactClick = this.handleContactClick.bind(this);
   }
 
   handleKeyPress(e) {
     this.props.keyPressHandler(e);
+  }
+
+  handleContactClick(e) {
+    this.props.contactSelectedHandler(e);
   }
 
   componentDidMount() {
@@ -33,14 +39,14 @@ class App extends Component {
 //https://stackoverflow.com/questions/12489909/how-to-have-a-3-column-layout-with-fixed-left-right-fluid-middle-and-fixed-foot
 
   render() {
-    const { config, layout } = this.props;
+    const { config, layout, carouselControls } = this.props;
     console.log(config.initialState);
     console.log(layout.initialLayout);
     const menuItems = (
       <ul>
         <li class=""><a href="http://monsters.cleverorc.com">Pathfinder Monster Finder</a></li>
         <li class=""><a href="http://www.monsteradvancer.com">Monster Advancer Tools</a></li>
-        <li class=""><a href="#">Contact</a></li>
+        <li class=""><a href="#" onClick={this.handleContactClick}>Contact</a></li>
         <li class=""><a href="#">About</a></li>
       </ul>
     );
@@ -54,11 +60,13 @@ class App extends Component {
         {fullSizedNavBar}
       </div>
     );
+    //const Carousel = <CleverCarousel controls={carouselControls}></CleverCarousel>;
+    const Carousel = <CleverCoverFlow/>
     const footerContent = <div class="footerContent">&copy; Copyright 2018 Clever Orc Games.</div>;
     const mainContent = (
       <div class="mainContentBackground">
         <div class="mainContent centered">
-          <CleverCarousel></CleverCarousel>
+          {Carousel}
         </div>
       </div>
     );
@@ -92,4 +100,4 @@ class App extends Component {
 
 const mapStateToProps = state => state;
 
-export default connect(mapStateToProps, {keyPressHandler})(App)
+export default connect(mapStateToProps, {keyPressHandler, contactSelectedHandler})(App)
