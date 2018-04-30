@@ -1,4 +1,5 @@
 import Keys from '../models/Keys'
+import {setSliderIndex} from '../actions'
 
 export const keyPressHandler = (e) => {
     return (dispatch, getState) => {
@@ -27,3 +28,9 @@ export const keyPressHandler = (e) => {
         //e.preventDefault(); // prevent the default action (scroll / move caret)
     }
 };
+
+export const slideItemSelectedHandler = (e, idx) => {
+    return (dispatch, getState) => {
+        dispatch(setSliderIndex(idx));
+    }
+}
