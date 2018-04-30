@@ -32,7 +32,7 @@ const mailChimpForm = (
 );
 const GreenSlide = (title, content) => {
     return (
-        <div>
+        <div key={title}>
             <div className="greenSlide" style={{backgroundColor: 'rgba(28,138,67,0.7)'}}>
                 <div className="greenSlideTitle">{title}</div>
                 <div className="greenSlideContent">{content}</div>
@@ -44,23 +44,58 @@ const GreenSlide = (title, content) => {
 const monsterSearchContent = (
     <div className="">
         <span>Easily search for Pathfinder Monsters by name and view their full stat blocks. Currently includes Bestiary 1-4.</span>
-        <a href="http://monsters.cleverorc.com" className="link_button">Try Pathfinder Monster Search</a>
+        <a href="http://monsters.cleverorc.com" className="link_button" target="_blank">Try Pathfinder Monster Search</a>
     </div>
-    );
-    const aboutContent = (
-        <div>Clever Orc games is focused on delivering awesome gaming tools to players and gamemasters alike. We provide a robust offering of free tools and we operate by the Patreon support of our users and fans.</div>
-    );
+);
+const monsterAdvancerContent = (
+    <div className="">
+        <div>All the original Monster Advancer Tools.</div> 
+        <ul>
+            <li>Monster Advancement for 3.5</li>
+            <li>Treasure Generator</li>
+            <li>Random Encounter Generator</li>
+            <li>Random Encounter Chart Generator</li>
+        </ul>
+        <a href="http://www.monsteradvancer.com" className="link_button" target="_blank">Visit Monster Advancer</a>
+    </div>
+);
+const aboutContent = (
+    <div>Clever Orc games is focused on delivering awesome gaming tools to players and gamemasters alike. We provide a robust offering of free tools and we operate by the Patreon support of our users and fans.</div>
+);
 class CleverSlider extends Component {
     render() {
         const slideIndexToSet = this.props.config.slideIndex;
         console.log("SLIDE INDEX: " + slideIndexToSet)
 
-        //Slide index isn't updating. We can address this by passing different props to re-render but then it will ignore subsequent clicks of the section link...even if we've moved off that link through normal use of the Slider. Re-rendering at each click is preferable but we can't get the render in the component to occur.
+        //Slide index isn't updating properly. We can address this by passing different props to re-render but then it will ignore subsequent clicks of the section link...even if we've moved off that link through normal use of the Slider. Re-rendering at each click is preferable but we can't get the render in the component to occur.
+        let slides = [
+            GreenSlide("Pathfinder Monster Search", monsterSearchContent),
+            GreenSlide("Monster Advancer Tools (original)", monsterAdvancerContent),
+            GreenSlide("Subscribe", mailChimpForm),
+            GreenSlide("About", aboutContent)
+        ];
+
+        if (slideIndexToSet == 1) {
+            slides = [
+                GreenSlide("Subscribe", mailChimpForm),
+                GreenSlide("About", aboutContent),
+                GreenSlide("Pathfinder Monster Search", monsterSearchContent),
+                GreenSlide("Monster Advancer Tools (original)", monsterAdvancerContent)
+            ];
+        }
+
+        if (slideIndexToSet == 2) {
+            slides = [
+                GreenSlide("About", aboutContent),
+                GreenSlide("Pathfinder Monster Search", monsterSearchContent),
+                GreenSlide("Monster Advancer Tools (original)", monsterAdvancerContent),
+                GreenSlide("Subscribe", mailChimpForm)
+            ];
+        }
+
         return (
         <Slider slideIndex={slideIndexToSet} duration={1500}>
-            {GreenSlide("Pathfinder Monster Search", monsterSearchContent)}
-            {GreenSlide("Subscribe", mailChimpForm)}
-            {GreenSlide("About", aboutContent)}
+            {slides.map(slide => slide)}
         </Slider>
         );
     }
