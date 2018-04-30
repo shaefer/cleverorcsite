@@ -1,0 +1,35 @@
+.greenSlide {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    color: white;
+}
+
+.greenSlideTitle {
+    padding: 2em 3em 0 3em;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.greenSlideContent {
+    padding: 1em 3em;
+    position: relative;
+    overflow: auto;
+}
+
+@media screen and (max-width:550px) {
+    .greenSlide {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-height:550px) {
+    .greenSlide {
+        height: 250px;
+        margin: 2em auto;
+    }
+
+    .mc-field-group:nth-child(2), .mc-field-group:nth-child(3) {
+        display:none
+    }
+}

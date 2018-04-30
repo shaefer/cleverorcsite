@@ -5,6 +5,7 @@ import './Nav.css';
 import { connect } from 'react-redux'
 import {keyPressHandler} from './action-creators'
 import CleverCarousel from './components/CleverCarousel'
+import CleverSlider from './components/CleverSlider'
 
 class App extends Component {
   constructor() {
@@ -40,7 +41,7 @@ class App extends Component {
       <ul>
         <li class=""><a href="http://monsters.cleverorc.com">Pathfinder Monster Finder</a></li>
         <li class=""><a href="http://www.monsteradvancer.com">Monster Advancer Tools</a></li>
-        <li class=""><a href="#">Contact</a></li>
+        <li class=""><a href="#">Subscribe</a></li>
         <li class=""><a href="#">About</a></li>
       </ul>
     );
@@ -58,7 +59,7 @@ class App extends Component {
     const mainContent = (
       <div class="mainContentBackground">
         <div class="mainContent centered">
-          <CleverCarousel></CleverCarousel>
+          <CleverSlider {...this.props}></CleverSlider>
         </div>
       </div>
     );
