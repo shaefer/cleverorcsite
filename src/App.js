@@ -5,15 +5,27 @@ import './Nav.css';
 import { connect } from 'react-redux'
 import {keyPressHandler} from './action-creators'
 import CleverCarousel from './components/CleverCarousel'
+import CleverSlider from './components/CleverSlider'
 
 class App extends Component {
   constructor() {
     super();
     this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.handleSubscribeItemSelected = this.handleSubscribeItemSelected.bind(this);
+    this.handleAboutItemSelected = this.handleAboutItemSelected.bind(this);
   }
 
   handleKeyPress(e) {
     this.props.keyPressHandler(e);
+  }
+
+  handleSubscribeItemSelected(e) {
+    console.log("Subscribe pressed")
+    this.refs.cleverSlider.setSlide(2);
+  }
+
+  handleAboutItemSelected(e) {
+    this.refs.cleverSlider.setSlide(3);
   }
 
   componentDidMount() {
@@ -33,55 +45,50 @@ class App extends Component {
 //https://stackoverflow.com/questions/12489909/how-to-have-a-3-column-layout-with-fixed-left-right-fluid-middle-and-fixed-foot
 
   render() {
-    const { config, layout } = this.props;
-    console.log(config.initialState);
-    console.log(layout.initialLayout);
+    const { config, layout } = this.props; //reducers
     const menuItems = (
       <ul>
-        <li class=""><a href="http://monsters.cleverorc.com">Pathfinder Monster Finder</a></li>
-        <li class=""><a href="http://www.monsteradvancer.com">Monster Advancer Tools</a></li>
-        <li class=""><a href="#">Contact</a></li>
-        <li class=""><a href="#">About</a></li>
+        <li className=""><a href="http://monsters.cleverorc.com" target="_blank">Pathfinder Monster Finder</a></li>
+        <li className=""><a href="http://www.monsteradvancer.com" target="_blank">Monster Advancer Tools</a></li>
+        <li className=""><a href="#" onClick={this.handleSubscribeItemSelected}>Subscribe</a></li>
+        <li className=""><a href="#" onClick={this.handleAboutItemSelected}>About</a></li>
       </ul>
     );
-    const fullSizedNavBar = <nav class="nav navcenter lg-only">{menuItems}</nav>;
-    const condensedNavBar = <nav class="nav navcenter sm-only">{menuItems}</nav>;
+    const fullSizedNavBar = <nav className="nav navcenter lg-only">{menuItems}</nav>;
+    const condensedNavBar = <nav className="nav navcenter sm-only">{menuItems}</nav>;
     const headerContent = (
-      <div class="headerContent">
+      <div className="headerContent">
         {condensedNavBar}
-        <div class="mainTitle">Clever Orc</div>
-        <div class="secondaryTitle">RPG Tools for Everyone</div>
+        <div className="mainTitle">Clever Orc</div>
+        <div className="secondaryTitle">RPG Tools for Everyone</div>
         {fullSizedNavBar}
       </div>
     );
-    const footerContent = <div class="footerContent">&copy; Copyright 2018 Clever Orc Games.</div>;
+    const footerContent = <div className="footerContent">&copy; Copyright 2018 Clever Orc Games.</div>;
     const mainContent = (
-      <div class="mainContentBackground">
-        <div class="mainContent centered">
-          <CleverCarousel></CleverCarousel>
+      <div className="mainContentBackground">
+        <div className="mainContent centered">
+          <CleverSlider {...this.props} ref="cleverSlider"></CleverSlider>
         </div>
       </div>
     );
 
-
-
-
     return (
       <main>
         <header>
-          <div class="left"></div>
-          <div class="right"></div>
-          <div class="center">
+          <div className="left"></div>
+          <div className="right"></div>
+          <div className="center">
               {headerContent}
           </div>
         </header>
-        <section class="mainContentContainer">
+        <section className="mainContentContainer">
           {mainContent}
         </section>
-        <footer class="footer">
-          <div class="left"></div>
-          <div class="right"></div>
-          <div class="center">
+        <footer className="footer">
+          <div className="left"></div>
+          <div className="right"></div>
+          <div className="center">
               {footerContent}
           </div>
         </footer>​
