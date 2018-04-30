@@ -3,7 +3,7 @@ import './App.css';
 import './CleverOrc.css';
 import './Nav.css';
 import { connect } from 'react-redux'
-import {keyPressHandler, slideItemSelectedHandler} from './action-creators'
+import {keyPressHandler} from './action-creators'
 import CleverCarousel from './components/CleverCarousel'
 import CleverSlider from './components/CleverSlider'
 
@@ -20,11 +20,12 @@ class App extends Component {
   }
 
   handleSubscribeItemSelected(e) {
-    this.props.slideItemSelectedHandler(e, 1);
+    console.log("Subscribe pressed")
+    this.refs.cleverSlider.setSlide(2);
   }
 
   handleAboutItemSelected(e) {
-    this.props.slideItemSelectedHandler(e, 2);
+    this.refs.cleverSlider.setSlide(3);
   }
 
   componentDidMount() {
@@ -44,13 +45,11 @@ class App extends Component {
 //https://stackoverflow.com/questions/12489909/how-to-have-a-3-column-layout-with-fixed-left-right-fluid-middle-and-fixed-foot
 
   render() {
-    const { config, layout } = this.props;
-    console.log(config.initialState);
-    console.log(layout.initialLayout);
+    const { config, layout } = this.props; //reducers
     const menuItems = (
       <ul>
-        <li className=""><a href="http://monsters.cleverorc.com">Pathfinder Monster Finder</a></li>
-        <li className=""><a href="http://www.monsteradvancer.com">Monster Advancer Tools</a></li>
+        <li className=""><a href="http://monsters.cleverorc.com" target="_blank">Pathfinder Monster Finder</a></li>
+        <li className=""><a href="http://www.monsteradvancer.com" target="_blank">Monster Advancer Tools</a></li>
         <li className=""><a href="#" onClick={this.handleSubscribeItemSelected}>Subscribe</a></li>
         <li className=""><a href="#" onClick={this.handleAboutItemSelected}>About</a></li>
       </ul>
@@ -69,13 +68,10 @@ class App extends Component {
     const mainContent = (
       <div className="mainContentBackground">
         <div className="mainContent centered">
-          <CleverSlider {...this.props}></CleverSlider>
+          <CleverSlider {...this.props} ref="cleverSlider"></CleverSlider>
         </div>
       </div>
     );
-
-
-
 
     return (
       <main>
@@ -103,4 +99,4 @@ class App extends Component {
 
 const mapStateToProps = state => state;
 
-export default connect(mapStateToProps, {keyPressHandler, slideItemSelectedHandler})(App)
+export default connect(mapStateToProps, {keyPressHandler})(App)

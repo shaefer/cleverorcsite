@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import Slider from 'react-animated-slider';
+//import Slider from 'react-animated-slider';
+import Slider from './AnimatedSlider' //overridden version of react-animated-slider...depends on react-animated-slider being installed.
 import 'react-animated-slider/build/horizontal.css';
 import './CleverSlider.css';
 
@@ -63,11 +64,12 @@ const aboutContent = (
     <div>Clever Orc games is focused on delivering awesome gaming tools to players and gamemasters alike. We provide a robust offering of free tools and we operate by the Patreon support of our users and fans.</div>
 );
 class CleverSlider extends Component {
-    render() {
-        const slideIndexToSet = this.props.config.slideIndex;
-        console.log("SLIDE INDEX: " + slideIndexToSet)
 
-        //Slide index isn't updating properly. We can address this by passing different props to re-render but then it will ignore subsequent clicks of the section link...even if we've moved off that link through normal use of the Slider. Re-rendering at each click is preferable but we can't get the render in the component to occur.
+    setSlide(index) {
+        this.refs.sliderComponent.setSlide(index);
+    }
+    
+    render() {
         let slides = [
             GreenSlide("Pathfinder Monster Search", monsterSearchContent),
             GreenSlide("Monster Advancer Tools (original)", monsterAdvancerContent),
@@ -75,26 +77,8 @@ class CleverSlider extends Component {
             GreenSlide("About", aboutContent)
         ];
 
-        if (slideIndexToSet == 1) {
-            slides = [
-                GreenSlide("Subscribe", mailChimpForm),
-                GreenSlide("About", aboutContent),
-                GreenSlide("Pathfinder Monster Search", monsterSearchContent),
-                GreenSlide("Monster Advancer Tools (original)", monsterAdvancerContent)
-            ];
-        }
-
-        if (slideIndexToSet == 2) {
-            slides = [
-                GreenSlide("About", aboutContent),
-                GreenSlide("Pathfinder Monster Search", monsterSearchContent),
-                GreenSlide("Monster Advancer Tools (original)", monsterAdvancerContent),
-                GreenSlide("Subscribe", mailChimpForm)
-            ];
-        }
-
         return (
-        <Slider slideIndex={slideIndexToSet} duration={1500}>
+        <Slider ref="sliderComponent" duration={500}>
             {slides.map(slide => slide)}
         </Slider>
         );
