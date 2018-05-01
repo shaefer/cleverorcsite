@@ -84,7 +84,7 @@ class CleverSlider extends Component {
         ];
 
         return (
-        <Slider ref="sliderComponent" duration={500}>
+        <Slider ref="sliderComponent">
             {slides.map(slide => slide)}
         </Slider>
         );
