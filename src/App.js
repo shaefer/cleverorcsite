@@ -4,7 +4,7 @@ import './CleverOrc.css';
 import './Nav.css';
 import { connect } from 'react-redux'
 import {keyPressHandler} from './action-creators'
-import CleverCarousel from './components/CleverCarousel'
+//import CleverCarousel from './components/CleverCarousel'
 import CleverSlider from './components/CleverSlider'
 
 class App extends Component {
