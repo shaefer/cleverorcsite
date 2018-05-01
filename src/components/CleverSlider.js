@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 //import Slider from 'react-animated-slider';
 import Slider from './AnimatedSlider' //overridden version of react-animated-slider...depends on react-animated-slider being installed.
+import privacyPolicy from '../models/PrivacyPolicy'
 import 'react-animated-slider/build/horizontal.css';
 import './CleverSlider.css';
 
@@ -60,8 +61,13 @@ const monsterAdvancerContent = (
         <a href="http://www.monsteradvancer.com" className="link_button" target="_blank">Visit Monster Advancer</a>
     </div>
 );
+
 const aboutContent = (
-    <div>Clever Orc games is focused on delivering awesome gaming tools to players and gamemasters alike. We provide a robust offering of free tools and we operate by the Patreon support of our users and fans.</div>
+    <div>
+        <div style={{marginBottom: '10px'}}>Clever Orc games is focused on delivering awesome gaming tools to players and gamemasters alike. We provide a robust offering of free tools and we operate by the Patreon support of our users and fans.</div>
+        
+        {privacyPolicy}
+    </div>
 );
 class CleverSlider extends Component {
 
