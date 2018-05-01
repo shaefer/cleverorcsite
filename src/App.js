@@ -51,7 +51,7 @@ class App extends Component {
         <li className=""><a href="http://monsters.cleverorc.com" target="_blank">Pathfinder Monster Finder</a></li>
         <li className=""><a href="http://www.monsteradvancer.com" target="_blank">Monster Advancer Tools</a></li>
         <li className=""><a href="#" onClick={this.handleSubscribeItemSelected}>Subscribe</a></li>
-        <li className=""><a href="#" onClick={this.handleAboutItemSelected}>About</a></li>
+        <li className=""><a href="#" onClick={this.handleAboutItemSelected}>About/Privacy</a></li>
       </ul>
     );
     const fullSizedNavBar = <nav className="nav navcenter lg-only">{menuItems}</nav>;

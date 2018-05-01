@@ -8,4 +8,10 @@ const privacyPolicy = (
     </div>
 );
 
+export const inlinePrivacyPolicy = (
+    <span>
+        <a href="//www.iubenda.com/privacy-policy/70193923" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">{privacyScript}</script>
+    </span>
+);
+
 export default privacyPolicy;

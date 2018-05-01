@@ -80,7 +80,7 @@ class CleverSlider extends Component {
             GreenSlide("Pathfinder Monster Search", monsterSearchContent),
             GreenSlide("Monster Advancer Tools (original)", monsterAdvancerContent),
             GreenSlide("Subscribe", mailChimpForm),
-            GreenSlide("About", aboutContent)
+            GreenSlide("About/Privacy", aboutContent)
         ];
 
         return (
