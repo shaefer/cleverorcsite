@@ -17,6 +17,10 @@
     font-size: 1.3em;
   }
 
+  .titleFont {
+    font-family: 'Julius Sans One', sans-serif;
+  }
+
 .mainContentBackground {
     background: darkslategrey url('/images/orc_king_hoard.jpg') no-repeat fixed center;
     background-size: cover; /*70%?*/

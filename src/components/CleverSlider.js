@@ -65,8 +65,12 @@ const monsterAdvancerContent = (
 const aboutContent = (
     <div>
         <div style={{marginBottom: '10px'}}>Clever Orc games is focused on delivering awesome gaming tools to players and gamemasters alike. We provide a robust offering of free tools and we operate by the Patreon support of our users and fans.</div>
-        
+        <div className="titleFont">Privacy Policy</div>
         {privacyPolicy}
+        <div style={{margin: '10px 0'}}>
+            <div className="titleFont">External Status Page:</div>
+            <a href="https://status.cleverorc.com" className="link_button" style={{margin: '0', width: 'inherit'}}>status.cleverorc.com</a>
+        </div>
     </div>
 );
 class CleverSlider extends Component {
@@ -80,7 +84,7 @@ class CleverSlider extends Component {
             GreenSlide("Pathfinder Monster Search", monsterSearchContent),
             GreenSlide("Monster Advancer Tools (original)", monsterAdvancerContent),
             GreenSlide("Subscribe", mailChimpForm),
-            GreenSlide("About/Privacy", aboutContent)
+            GreenSlide("About", aboutContent)
         ];
 
         return (
