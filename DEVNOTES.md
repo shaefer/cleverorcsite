@@ -22,3 +22,5 @@ We ended up with
 - react-animated-slider (had everything but a built in function to set a specific slide, but that was easily added by exposing a function and using ref)
 
 Went to find privacy policy...ended up using ibuena which was recommended by MailChimp and had a special MailChimp set of privacy categories.
+
+Added uptime monitoring with uptimerobot. 50 free monitors at up to 5/min intervals with public dashboards and dns customization for free as well. Hooked in status.cleverorc.com
