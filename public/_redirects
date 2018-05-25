@@ -1,2 +1,2 @@
 # Redirect default Netlify subdomain to primary domain
-http://cleverorc.netlify.com/* http://www.cleverorc.com/:splat 301!
+https://cleverorc.netlify.com/* https://www.cleverorc.com/:splat 301!
