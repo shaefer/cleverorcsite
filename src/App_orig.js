@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import './App.css';
+import './CleverOrc.css';
+import './Nav.css';
 import { connect } from 'react-redux'
 import {keyPressHandler} from './action-creators'
 
-import './CleverOrcNew.css';
+import CleverSlider from './components/CleverSlider'
 
-import {monsterFinderContent, monsterSearchContent, dmScreenContent, monsterAdvancerContent, mailChimpForm, aboutContent} from './components/Content';
-import {orcKingUrl} from './components/MonsterImages'
 class App extends Component {
   constructor() {
     super();
@@ -17,7 +18,7 @@ class App extends Component {
   handleKeyPress(e) {
     this.props.keyPressHandler(e);
   }
-  
+
   handleSubscribeItemSelected(e) {
     console.log("Subscribe pressed")
     this.refs.cleverSlider.setSlide(2);
@@ -35,6 +36,14 @@ class App extends Component {
     document.removeEventListener('keydown', this.handleKeyPress);
   }
 
+//http://linxtion.com/demo/react-image-gallery/ Just geared toward images
+//https://github.com/Pau1fitz/react-slidez errors on basic setup. No community.
+//https://www.npmjs.com/package/react-touch-carousel
+
+
+//Layout
+//https://stackoverflow.com/questions/12489909/how-to-have-a-3-column-layout-with-fixed-left-right-fluid-middle-and-fixed-foot
+
   render() {
     const { config, layout } = this.props; //reducers
     const menuItems = (
@@ -49,44 +58,28 @@ class App extends Component {
     );
     const fullSizedNavBar = <nav className="nav navcenter lg-only">{menuItems}</nav>;
     const condensedNavBar = <nav className="nav navcenter sm-only">{menuItems}</nav>;
-
     const headerContent = (
       <div className="headerContent">
+        {condensedNavBar}
         <div className="mainTitle">Clever Orc</div>
         <div className="secondaryTitle">RPG Tools for Everyone</div>
+        {fullSizedNavBar}
       </div>
     );
     const footerContent = <div className="footerContent">&copy; Copyright 2018 Clever Orc Games.</div>;
     const mainContent = (
       <div className="mainContentBackground">
         <div className="mainContent centered">
-          <section className="cleverorcrow">
-            <div className="cleverorccolumn cleverorctext">
-              <h4>Pathfinder Monster Tools</h4>
-              <ul>
-                <li>Monster Finder</li>
-                <li>Monster Search</li>
-                <li>Monster Advancer</li>
-                <li>DM Screen
-                  <ul>
-                    <li>Roll dice</li>
-                    <li>Roll stats</li>
-                    <li>Generate Random Monsters by CR</li>
-                    <li>Random Charts</li>
-                  </ul>
-                </li>
-              </ul>
-              
-            </div>
-            <div className="cleverorccolumn orcKingImg"><img src={orcKingUrl}/></div>
-          </section>
+          <CleverSlider {...this.props} ref="cleverSlider"></CleverSlider>
         </div>
       </div>
     );
 
     return (
       <main>
-        <header className="cleverorc">
+        <header>
+          <div className="left"></div>
+          <div className="right"></div>
           <div className="center">
               {headerContent}
           </div>
@@ -94,7 +87,9 @@ class App extends Component {
         <section className="mainContentContainer">
           {mainContent}
         </section>
-        <footer className="cleverorc">
+        <footer className="footer">
+          <div className="left"></div>
+          <div className="right"></div>
           <div className="center">
               {footerContent}
           </div>

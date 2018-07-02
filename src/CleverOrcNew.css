@@ -1,0 +1,117 @@
+* {margin: 0; padding: 0} /* reset */
+html, body, div#root {
+    height: 100%;            
+}
+body {
+    box-sizing: border-box; /* paulirish.com/2012/box-sizing-border-box-ftw/ */
+}
+
+@import '../node_modules/milligram/dist/milligram.min.css'; /*If we import milligram we get a standard base of css*/
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');
+
+.mainTitle {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: black;
+  }
+  .secondaryTitle {
+    font-family: 'Julius Sans One', sans-serif;
+    letter-spacing: 5px;
+    line-height: 1.4;
+    color: white;
+    font-size: 1em;
+    padding-left: .2em;
+  }
+
+  .titleFont {
+    font-family: 'Julius Sans One', sans-serif;
+  }
+
+
+  header.cleverorc {
+      text-align: center;
+    padding: 0.5em;
+    text-shadow: 3px 3px 3px rgba(0,0,0, 0.2);
+  
+    background: linear-gradient(0.25turn,  #68b04d 0%, #1c8a43 80%,rgb(16, 107, 19) 100%);
+  }
+
+
+
+  footer.cleverorc {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: black;
+    background: linear-gradient(0.25turn,  #68b04d 0%, #1c8a43 80%,rgb(16, 107, 19) 100%);
+  }
+
+  footer.cleverorc .footerContent {
+      text-align: center;
+      font-size: 1em;
+  }
+
+  @media screen and (max-width:640px) {
+    header.cleverorc {
+        text-align: center;
+      }
+
+      footer.cleverorc .footerContent {
+        font-size: 1em;
+    }
+  }
+
+.mainContent {
+    text-align: center;
+}
+
+h4 {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.cleverorcrow {
+}
+
+.cleverorcrow ul {
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.cleverorctext li {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+
+.cleverorccolumn {
+    border: 1px solid tranparent;
+    display:inline-block;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.orcKingImg {
+    width: 17%;
+    padding: 0;
+}
+
+.orcKingImg img  {
+    width: 100%;
+    height: auto;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    margin-left: -170px;
+}
