@@ -4,8 +4,10 @@ import './CleverOrc.css';
 import './Nav.css';
 import { connect } from 'react-redux'
 import {keyPressHandler} from './action-creators'
-
+//import CleverCarousel from './components/CleverCarousel'
 import CleverSlider from './components/CleverSlider'
+
+import {monsterFinderContent, monsterSearchContent, dmScreenContent, monsterAdvancerContent, mailChimpForm, aboutContent} from './components/Content';
 
 class App extends Component {
   constructor() {
@@ -70,7 +72,12 @@ class App extends Component {
     const mainContent = (
       <div className="mainContentBackground">
         <div className="mainContent centered">
-          <CleverSlider {...this.props} ref="cleverSlider"></CleverSlider>
+          <section className="green">{monsterFinderContent}</section>
+          <section className="green">{monsterSearchContent}</section>
+          <section className="green">{dmScreenContent}</section>
+          <section className="green">{monsterAdvancerContent}</section>
+          <section className="green">{mailChimpForm}</section>
+          <section className="green">{aboutContent}</section>
         </div>
       </div>
     );

@@ -63,3 +63,11 @@ header {
     min-height: 185px;
   }
 }
+
+
+/* content sections */
+.green {
+    background: green;
+    padding: 30px;
+    margin-bottom: 30px;
+}
