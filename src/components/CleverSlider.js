@@ -43,10 +43,22 @@ const GreenSlide = (title, content) => {
     );
 }
 
+const monsterFinderContent = (
+    <div className="">
+        <span>Easily search for Pathfinder Monsters by name and view their full stat blocks. Includes Bestiary 1-4.</span>
+        <a href="http://monsters.cleverorc.com" className="link_button" target="_blank">Try Pathfinder Monster Finder</a>
+    </div>
+);
 const monsterSearchContent = (
     <div className="">
-        <span>Easily search for Pathfinder Monsters by name and view their full stat blocks. Currently includes Bestiary 1-4.</span>
-        <a href="http://monsters.cleverorc.com" className="link_button" target="_blank">Try Pathfinder Monster Search</a>
+        <span>Search for Pathfinder Monsters by Challenge Rating, Strength, Armor Class, or Environment. Includes Bestiary 1-4.</span>
+        <a href="http://monsters.cleverorc.com/search" className="link_button" target="_blank">Try Pathfinder Monster Search</a>
+    </div>
+);
+const dmScreenContent = (
+    <div className="">
+        <span>Roll Dice, stats, Generate random monster by CR, or roll on a number of random charts (NPC Characteristics, dungeon entrances, Plot Twists, etc.)</span>
+        <a href="http://monsters.cleverorc.com/dmscreen" className="link_button" target="_blank">Try DMScreen</a>
     </div>
 );
 const monsterAdvancerContent = (
@@ -81,7 +93,9 @@ class CleverSlider extends Component {
     
     render() {
         let slides = [
+            GreenSlide("Pathfinder Monster Finder", monsterFinderContent),
             GreenSlide("Pathfinder Monster Search", monsterSearchContent),
+            GreenSlide("DM Screen", dmScreenContent),
             GreenSlide("Monster Advancer Tools (original)", monsterAdvancerContent),
             GreenSlide("Subscribe", mailChimpForm),
             GreenSlide("About", aboutContent)

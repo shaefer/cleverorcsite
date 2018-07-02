@@ -49,6 +49,8 @@ class App extends Component {
     const menuItems = (
       <ul>
         <li className=""><a href="http://monsters.cleverorc.com" target="_blank">Pathfinder Monster Finder</a></li>
+        <li className=""><a href="http://monsters.cleverorc.com/search" target="_blank">Pathfinder Monster Search</a></li>
+        <li className=""><a href="http://monsters.cleverorc.com/dmscreen" target="_blank">DM Screen</a></li>
         <li className=""><a href="http://www.monsteradvancer.com" target="_blank">Monster Advancer Tools</a></li>
         <li className=""><a href="#" onClick={this.handleSubscribeItemSelected}>Subscribe</a></li>
         <li className=""><a href="#" onClick={this.handleAboutItemSelected}>About/Privacy</a></li>
