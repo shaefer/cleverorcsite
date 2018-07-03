@@ -155,8 +155,7 @@ h4 {
 @media screen and (max-width:640px) {
     .orcKingImg, .cleverorcfloat {
        float:right;
-       width: 70%;
-       margin-right: -50px;
+       width: 60%;
     }
 
     .cleverorcfirstrow {
