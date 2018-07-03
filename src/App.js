@@ -80,7 +80,7 @@ class App extends Component {
             </div>
             <div className="cleverorccolumn orcKingImg cleverorcimage"><img src={orcKingUrl}/></div>
           </section>
-          <section className="cleverorcrow">
+          <section className="cleverorcrow joinrow">
             <div className="cleverorccolumn phoenixImg cleverorcimage"><img src={phoenixUrl}/></div>
             <div className="cleverorccolumn cleverorctext">
               <h4>Join our community</h4>

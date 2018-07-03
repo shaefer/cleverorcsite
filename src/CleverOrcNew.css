@@ -120,6 +120,12 @@ h4 {
     vertical-align: middle;
 }
 
+.joinrow {
+    background-color: #f1f2f2;
+    padding-top: 1em;
+    background: linear-gradient(0.25turn,  #f1f2f2 0%, #aaaaaa 80%,#777777 100%);
+}
+
 .orcKingImg {
     width: 17%;
     padding: 0;
