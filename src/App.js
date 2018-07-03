@@ -5,7 +5,7 @@ import {keyPressHandler} from './action-creators'
 import './CleverOrcNew.css';
 
 import {monsterFinderContent, monsterSearchContent, dmScreenContent, monsterAdvancerContent, mailChimpForm, aboutContent} from './components/Content';
-import {orcKingUrl} from './components/MonsterImages'
+import {orcKingUrl, phoenixUrl} from './components/MonsterImages'
 class App extends Component {
   constructor() {
     super();
@@ -60,25 +60,32 @@ class App extends Component {
     const mainContent = (
       <div className="mainContentBackground">
         <div className="mainContent centered">
-          <section className="cleverorcrow">
-            <div className="cleverorccolumn cleverorctext">
+          <section className="cleverorcrow cleverorcfirstrow">
+            <div className="cleverorccolumn cleverorctext toolList">
               <h4>Pathfinder Monster Tools</h4>
               <ul>
-                <li>Monster Finder</li>
-                <li>Monster Search</li>
-                <li>Monster Advancer</li>
-                <li>DM Screen
+                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com">Monster Finder</a></li>
+                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com/search">Monster Search</a></li>
+                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="http://www.monsteradvancer.com">Monster Advancer</a></li>
+                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com/dmscreen">DM Screen</a>
                   <ul>
                     <li>Roll dice</li>
                     <li>Roll stats</li>
-                    <li>Generate Random Monsters by CR</li>
+                    <li>Random Monsters by CR</li>
                     <li>Random Charts</li>
                   </ul>
                 </li>
               </ul>
               
             </div>
-            <div className="cleverorccolumn orcKingImg"><img src={orcKingUrl}/></div>
+            <div className="cleverorccolumn orcKingImg cleverorcimage"><img src={orcKingUrl}/></div>
+          </section>
+          <section className="cleverorcrow">
+            <div className="cleverorccolumn phoenixImg cleverorcimage"><img src={phoenixUrl}/></div>
+            <div className="cleverorccolumn cleverorctext">
+              <h4>Join our community</h4>
+              {mailChimpForm}
+            </div>
           </section>
         </div>
       </div>

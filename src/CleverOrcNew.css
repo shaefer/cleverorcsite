@@ -78,7 +78,13 @@ h4 {
     font-weight: bold;
 }
 
+.cleverorcfirstrow {
+    margin-top: 1em;
+    margin-bottom: -3em;
+}
+
 .cleverorcrow {
+    position: relative;
 }
 
 .cleverorcrow ul {
@@ -102,9 +108,31 @@ h4 {
 .orcKingImg {
     width: 17%;
     padding: 0;
+    margin-left: -50px;
 }
 
-.orcKingImg img  {
+@media screen and (max-width:640px) {
+    .orcKingImg {
+       position: absolute;
+       right: 0;
+       width: 50%;
+       top: 2.3em;
+    }
+
+    .toolList {
+        width: 100%;
+        text-align: left;
+    }
+
+    .phoenixImg {
+        padding: 0;
+        width: 100%;
+        }
+  }
+
+
+
+.cleverorcimage img  {
     width: 100%;
     height: auto;
     -moz-transform: scaleX(-1);
@@ -113,5 +141,9 @@ h4 {
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
-    margin-left: -170px;
+
+}
+
+.icon16 {
+    width: 16px;
 }
