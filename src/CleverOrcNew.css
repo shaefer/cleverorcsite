@@ -36,17 +36,32 @@ body {
 
 
   header.cleverorc {
-      text-align: center;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 10000;
+    text-align: center;
     padding: 0.5em;
     text-shadow: 3px 3px 3px rgba(0,0,0, 0.2);
   
     background: linear-gradient(0.25turn,  #68b04d 0%, #1c8a43 80%,rgb(16, 107, 19) 100%);
   }
 
+ main.cleverorc {
+     position: relative;
+ }
 
+ section.mainContentContainer {
+     margin-top: 80px;
+ }
 
   footer.cleverorc {
-    position: fixed;
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
@@ -80,7 +95,7 @@ h4 {
 
 .cleverorcfirstrow {
     margin-top: 1em;
-    margin-bottom: -3em;
+    margin-bottom: 1em;
 }
 
 .cleverorcrow {
@@ -109,6 +124,10 @@ h4 {
     width: 17%;
     padding: 0;
     margin-left: -50px;
+}
+
+.aboutSection {
+    width: 75%;
 }
 
 @media screen and (max-width:640px) {

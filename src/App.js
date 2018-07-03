@@ -87,12 +87,17 @@ class App extends Component {
               {mailChimpForm}
             </div>
           </section>
+          <section className="cleverorcrow">
+            <div className="cleverorccolumn cleverorctext aboutSection">
+              {aboutContent}
+            </div>
+          </section>
         </div>
       </div>
     );
 
     return (
-      <main>
+      <main className="cleverorc">
         <header className="cleverorc">
           <div className="center">
               {headerContent}
