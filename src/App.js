@@ -75,17 +75,17 @@ class App extends Component {
                     <li>Search for all monster that meet your criteria. Search on CR, Stats, and Environment</li>
                   </ul>
                 </li>
-                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="http://www.monsteradvancer.com">Monster Advancer</a>
-                  <ul>
-                    <li>Older tools -> monster advancement, encounter and treasure generation (Some 3.5, some Pathfinder)</li>
-                  </ul>
-                </li>
                 <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com/dmscreen">DM Screen</a>
                   <ul>
                     <li>Roll dice</li>
                     <li>Roll stats</li>
                     <li>Random Monsters by CR</li>
                     <li>Random Charts</li>
+                  </ul>
+                </li>
+                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="http://www.monsteradvancer.com">Monster Advancer</a>
+                  <ul>
+                    <li>Older tools -> monster advancement, encounter and treasure generation (Some 3.5, some Pathfinder)</li>
                   </ul>
                 </li>
               </ul>

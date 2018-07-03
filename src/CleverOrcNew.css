@@ -144,10 +144,19 @@ h4 {
     width: 800px;
 }
 
+.toolList ul {
+    list-style-type: none;
+}
+
+.toolList ul ul {
+    list-style-type: disc;
+}
+
 @media screen and (max-width:640px) {
     .orcKingImg, .cleverorcfloat {
        float:right;
-       width: 50%;
+       width: 70%;
+       margin-right: -50px;
     }
 
     .cleverorcfirstrow {
