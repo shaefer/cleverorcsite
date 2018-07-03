@@ -61,12 +61,25 @@ class App extends Component {
       <div className="mainContentBackground">
         <div className="mainContent centered">
           <section className="cleverorcrow cleverorcfirstrow">
-            <div className="cleverorccolumn cleverorctext toolList">
-              <h4>Pathfinder Monster Tools</h4>
+            <p className="cleverorccolumn cleverorctext toolList">
+            <div className="cleverorcfloat"><img src={orcKingUrl}/></div>
+              <h4>Tools for Pathfinder RPG and 3.5</h4>
               <ul>
-                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com">Monster Finder</a></li>
-                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com/search">Monster Search</a></li>
-                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="http://www.monsteradvancer.com">Monster Advancer</a></li>
+                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com">Monster Finder</a>
+                  <ul>
+                    <li>Find for monsters by name and view full statblocks.</li>
+                  </ul>
+                </li>
+                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com/search">Monster Search</a>
+                  <ul>
+                    <li>Search for all monster that meet your criteria. Search on CR, Stats, and Environment</li>
+                  </ul>
+                </li>
+                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="http://www.monsteradvancer.com">Monster Advancer</a>
+                  <ul>
+                    <li>Older tools -> monster advancement, encounter and treasure generation (Some 3.5, some Pathfinder)</li>
+                  </ul>
+                </li>
                 <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com/dmscreen">DM Screen</a>
                   <ul>
                     <li>Roll dice</li>
@@ -76,9 +89,7 @@ class App extends Component {
                   </ul>
                 </li>
               </ul>
-              
-            </div>
-            <div className="cleverorccolumn orcKingImg cleverorcimage"><img src={orcKingUrl}/></div>
+            </p>
           </section>
           <section className="cleverorcrow joinrow">
             <div className="cleverorccolumn phoenixImg cleverorcimage"><img src={phoenixUrl}/></div>

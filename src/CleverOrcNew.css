@@ -95,7 +95,6 @@ h4 {
 
 .cleverorcfirstrow {
     margin-top: 1em;
-    margin-bottom: 1em;
 }
 
 .cleverorcrow {
@@ -132,16 +131,31 @@ h4 {
     margin-left: -50px;
 }
 
+.orcKingImg, .cleverorcfloat {
+    float:right;
+    width: 300px;
+ }
+
 .aboutSection {
     width: 75%;
 }
 
+.toolList {
+    width: 800px;
+}
+
 @media screen and (max-width:640px) {
-    .orcKingImg {
-       position: absolute;
-       right: 0;
+    .orcKingImg, .cleverorcfloat {
+       float:right;
        width: 50%;
-       top: 2.3em;
+    }
+
+    .cleverorcfirstrow {
+        text-align: left;
+    }
+
+    .cleverorcfirstrow p {
+        margin: 0;
     }
 
     .toolList {
