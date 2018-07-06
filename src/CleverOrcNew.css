@@ -8,9 +8,8 @@ body {
 
 @import '../node_modules/milligram/dist/milligram.min.css'; /*If we import milligram we get a standard base of css*/
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
-@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');
+@import url('./fonts.css');
+/* https://fonts.googleapis.com/css?family=Playfair+Display|Julius+Sans+One|Oswald|Roboto */
 
 .mainTitle {
     font-family: 'Playfair Display', serif;
