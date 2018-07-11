@@ -92,10 +92,6 @@ h4 {
     font-weight: bold;
 }
 
-.cleverorcfirstrow {
-    margin-top: 1em;
-}
-
 .cleverorcrow {
     position: relative;
 }
@@ -161,6 +157,10 @@ h4 {
     .orcKingImg, .cleverorcfloat {
        float:right;
        width: 60%;
+    }
+
+    .mainContent section:first-child {
+        padding-top: 1em;
     }
 
     .cleverorcfirstrow {
