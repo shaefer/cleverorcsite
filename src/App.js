@@ -61,7 +61,7 @@ class App extends Component {
       <div className="mainContentBackground">
         <div className="mainContent centered">
           <section>
-          <a href="https://www.patreon.com/bePatron?c=12088652" data-patreon-widget-type="become-patron-button"><img src="/images/become_a_patron_button.png"/></a>
+          <a href="https://www.patreon.com/bePatron?c=1882197" data-patreon-widget-type="become-patron-button"><img src="/images/become_a_patron_button.png"/></a>
           </section>
           <section className="cleverorcrow cleverorcfirstrow">
             <p className="cleverorccolumn cleverorctext toolList">
