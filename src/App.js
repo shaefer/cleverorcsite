@@ -61,12 +61,12 @@ class App extends Component {
       <div className="mainContentBackground">
         <div className="mainContent centered">
           <section>
-          <a href="https://www.patreon.com/bePatron?u=12088652" data-patreon-widget-type="become-patron-button"><img src="/images/become_a_patron_button.png"/></a>
+          <a href="https://www.patreon.com/bePatron?c=12088652" data-patreon-widget-type="become-patron-button"><img src="/images/become_a_patron_button.png"/></a>
           </section>
           <section className="cleverorcrow cleverorcfirstrow">
             <p className="cleverorccolumn cleverorctext toolList">
             <div className="cleverorcfloat"><img src={orcKingUrl}/></div>
-              <h4>Tools for Pathfinder RPG and 3.5</h4>
+              <h4 className="toolListHeader">Tools for Pathfinder RPG and 3.5</h4>
               <ul>
                 <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com">Monster Finder</a>
                   <ul>
