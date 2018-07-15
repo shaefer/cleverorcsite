@@ -114,7 +114,7 @@ h4 {
     vertical-align: middle;
 }
 
-.joinrow {
+.joinrow, .legalrow {
     background-color: #f1f2f2;
     padding-top: 1em;
     background: linear-gradient(0.25turn,  #f1f2f2 0%, #aaaaaa 80%,#777777 100%);
@@ -137,8 +137,17 @@ h4 {
     width: 400px;
     }
 
-.aboutSection {
+.aboutSection, .legalSection {
     width: 75%;
+}
+
+.paizoNotices {
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.paizoNotices .trademarks {
+    margin-top: 1em;
 }
 
 .toolList {

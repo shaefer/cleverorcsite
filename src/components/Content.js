@@ -61,6 +61,17 @@ export const monsterAdvancerContent = (
     </div>
 );
 
+export const legalContent = (
+    <section className="paizoNotices">
+        <div className="compatibility">
+            Compatibility with the Pathfinder Roleplaying Game requires the Pathfinder Roleplaying Game from Paizo Inc. See <a href="http://paizo.com/pathfinderRPG">/pathfinderRPG</a> for more information on the Pathfinder Roleplaying Game. Paizo Inc. does not guarantee compatibility, and does not endorse this product.
+        </div>
+        <div className="trademarks">
+            Pathfinder is a registered trademark of Paizo Inc., and the Pathfinder Roleplaying Game and the Pathfinder Roleplaying Game Compatibility Logo are trademarks of Paizo Inc., and are used under the Pathfinder Roleplaying Game Compatibility License. See <a href="http://paizo.com/pathfinderRPG/compatibility">/pathfinder/rpg/compatibility</a> for more information on the compatibility license.
+        </div>
+    </section>
+);
+
 export const aboutContent = (
     <div>
         <div style={{marginBottom: '10px'}}>Clever Orc Games is focused on delivering awesome gaming tools to players and gamemasters alike. We provide a robust offering of free tools and we operate by the Patreon support of our users and fans.</div>
@@ -70,5 +81,6 @@ export const aboutContent = (
             <div className="titleFont">Status Page:</div>
             <img src="images/external_link_icon.png" className="icon16"/><a href="https://status.cleverorc.com" className="link_button" style={{margin: '0', width: 'inherit'}}>status.cleverorc.com</a>
         </div>
+        
     </div>
 );
