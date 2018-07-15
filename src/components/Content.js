@@ -1,6 +1,6 @@
 import React from 'react'
 
-import privacyPolicy from '../models/PrivacyPolicy'
+import privacyPolicy, {inlinePrivacyPolicy} from '../models/PrivacyPolicy'
 
 export const mailChimpForm = (
     <div id="mc_embed_signup" className="">
@@ -61,15 +61,15 @@ export const monsterAdvancerContent = (
     </div>
 );
 
-export const aboutContent = (
-    <div>
-        <div style={{marginBottom: '10px'}}>Clever Orc Games is focused on delivering awesome gaming tools to players and gamemasters alike. We provide a robust offering of free tools and we operate by the Patreon support of our users and fans.</div>
-        <div className="titleFont">Privacy Policy</div>
-        {privacyPolicy}
-        <div style={{margin: '10px 0'}}>
-            <div className="titleFont">Status Page:</div>
-            <img src="images/external_link_icon.png" className="icon16"/><a href="https://status.cleverorc.com" className="link_button" style={{margin: '0', width: 'inherit'}}>status.cleverorc.com</a>
+export const footerContent = (
+    <div className="footerContent">
+        <div>
+            <div>&copy;2018 Clever Orc Games, &copy;2009-2018 Monster Advancer</div>
+            <a href="https://monsters.cleverorc.com/copyright">Copyrights and Trademarks</a>
+            <span> | </span>
+            <a href="https://status.cleverorc.com">Status Page</a>
+            <span> | </span>
+            {inlinePrivacyPolicy}
         </div>
-        <div><a href="https://monsters.cleverorc.com/copyright">Copyrights and Trademarks</a></div>
     </div>
 );

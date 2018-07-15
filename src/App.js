@@ -4,7 +4,7 @@ import {keyPressHandler} from './action-creators'
 
 import './CleverOrcNew.css';
 
-import {monsterFinderContent, monsterSearchContent, dmScreenContent, monsterAdvancerContent, mailChimpForm, aboutContent} from './components/Content';
+import {monsterFinderContent, monsterSearchContent, dmScreenContent, monsterAdvancerContent, mailChimpForm, aboutContent, footerContent} from './components/Content';
 import {orcKingUrl, phoenixUrl} from './components/MonsterImages'
 class App extends Component {
   constructor() {
@@ -56,7 +56,6 @@ class App extends Component {
         <div className="secondaryTitle">RPG Tools for Everyone</div>
       </div>
     );
-    const footerContent = <div className="footerContent">&copy; Copyright 2018 Clever Orc Games.</div>;
     const mainContent = (
       <div className="mainContentBackground">
         <div className="mainContent centered">
@@ -99,11 +98,6 @@ class App extends Component {
             <div className="cleverorccolumn cleverorctext">
               <h4>Join our community</h4>
               {mailChimpForm}
-            </div>
-          </section>
-          <section className="cleverorcrow">
-            <div className="cleverorccolumn cleverorctext aboutSection">
-              {aboutContent}
             </div>
           </section>
         </div>

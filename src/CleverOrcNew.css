@@ -70,8 +70,13 @@ body {
 
   footer.cleverorc .footerContent {
       text-align: center;
-      font-size: 1em;
+      font-size: 0.8em;
   }
+
+  footer.cleverorc .footerContent a {
+    color: black;
+    text-decoration: underline;
+}
 
   @media screen and (max-width:640px) {
     header.cleverorc {
@@ -79,7 +84,7 @@ body {
       }
 
       footer.cleverorc .footerContent {
-        font-size: 1em;
+        font-size: 0.7em;
     }
   }
 
