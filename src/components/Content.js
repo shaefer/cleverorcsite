@@ -61,6 +61,18 @@ export const monsterAdvancerContent = (
     </div>
 );
 
+export const artistCredits = (
+    <section className="">
+        <div>We want to give a huge shout-out to these amazing artists whose work we've used as part of this project. These pieces were made available as part of a Stock Art Kickstarter made possible by <a href="http://www.inkwellideas.com">Inkwell Ideas</a></div>
+        <div className="artists">
+            <div><span className="artist">Bruno Balixa</span> - Iron Golem, Behir, Skeletal Dragon</div>
+            <div><span className="artist">Eric Quigley</span> - Orc King, Froghemoth</div>
+            <div><span className="artist">Malcolm McClinton</span> - Phoenix, Remorhaz</div>
+            <div><span className="artist">Matt Bulahao</span> - Goblin Dog, Iron Cobra (backgrounds)</div>
+        </div>
+    </section>
+);
+
 export const footerContent = (
     <div className="footerContent">
         <div>

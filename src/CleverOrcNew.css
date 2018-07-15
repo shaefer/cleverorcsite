@@ -142,8 +142,23 @@ h4 {
     width: 400px;
     }
 
-.aboutSection {
+.aboutSection, .creditSection {
     width: 75%;
+}
+
+.creditSection {
+    padding: 2em 0;
+    font-size: 0.9em;
+}
+
+.creditSection .artists {
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.creditSection .artist {
+    font-weight: bold;
 }
 
 .toolList {
@@ -189,7 +204,15 @@ h4 {
     .phoenixImg {
         padding: 0;
         width: 100%;
-        }
+    }
+    .creditSection {
+        width: 80%;
+    }
+    .creditSection .artists {
+        text-align: left;
+        width: 100%;
+        margin: 0 auto;
+    }
   }
 
 
