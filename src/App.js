@@ -4,7 +4,7 @@ import {keyPressHandler} from './action-creators'
 
 import './CleverOrcNew.css';
 
-import {monsterFinderContent, monsterSearchContent, dmScreenContent, monsterAdvancerContent, mailChimpForm, aboutContent, legalContent} from './components/Content';
+import {monsterFinderContent, monsterSearchContent, dmScreenContent, monsterAdvancerContent, mailChimpForm, aboutContent} from './components/Content';
 import {orcKingUrl, phoenixUrl} from './components/MonsterImages'
 class App extends Component {
   constructor() {
@@ -104,11 +104,6 @@ class App extends Component {
           <section className="cleverorcrow">
             <div className="cleverorccolumn cleverorctext aboutSection">
               {aboutContent}
-            </div>
-          </section>
-          <section className="cleverorcrow legalrow">
-            <div className="cleverorccolumn cleverorctext legalSection">
-              {legalContent}
             </div>
           </section>
         </div>
