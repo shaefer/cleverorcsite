@@ -63,7 +63,8 @@ export const monsterAdvancerContent = (
 
 export const artistCredits = (
     <section className="">
-        <div>We want to give a huge shout-out to these amazing artists whose work we've used as part of this project. These pieces were made available as part of a Stock Art Kickstarter made possible by <a href="http://www.inkwellideas.com">Inkwell Ideas</a></div>
+        <div className="titleFont" style={{fontSize:"1.3em"}}>Artist Credits</div>
+        <div>The following artists' work(s) were used as part of these tools. These pieces were made available via a Stock Art Collection coordinated by <a href="http://www.inkwellideas.com">Inkwell Ideas</a> </div>
         <div className="artists">
             <div><span className="artist">Bruno Balixa</span> - Iron Golem, Behir, Skeletal Dragon</div>
             <div><span className="artist">Eric Quigley</span> - Orc King, Froghemoth</div>
