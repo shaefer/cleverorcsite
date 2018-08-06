@@ -85,6 +85,11 @@ class App extends Component {
                     <li>Random Charts</li>
                   </ul>
                 </li>
+                <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com/monsteradvancer">Monster Advancer v2 (3.5)</a>
+                  <ul>
+                    <li>Customize 3.5 monsters. Adjust templates, classes, stats, hit dice, and size.</li>
+                  </ul>
+                </li>
                 <li><img src="/images/external_link_icon.png" className="icon16"/><a href="http://www.monsteradvancer.com">Monster Advancer</a>
                   <ul>
                     <li>Older tools -> monster advancement, encounter and treasure generation (Some 3.5, some Pathfinder)</li>
