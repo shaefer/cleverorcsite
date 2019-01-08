@@ -69,20 +69,23 @@ class App extends Component {
               <ul>
                 <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com">Monster Finder</a>
                   <ul>
-                    <li>Find for monsters by name and view full statblocks.</li>
+                    <li>Find monsters by name and view full statblocks.</li>
                   </ul>
                 </li>
                 <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com/search">Monster Search</a>
                   <ul>
-                    <li>Search for all monster that meet your criteria. Search on CR, Stats, and Environment</li>
+                    <li>Search for all monsters that have a given CR, Ability Score, or Environment</li>
                   </ul>
                 </li>
                 <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com/dmscreen">DM Screen</a>
                   <ul>
-                    <li>Roll dice</li>
-                    <li>Roll stats</li>
-                    <li>Random Monsters by CR</li>
-                    <li>Random Charts</li>
+                    <li>Build a bunch of buttons to generate all the things!</li>
+                      <ul>
+                        <li>Roll dice and stats</li>
+                        <li>Generate Groups of Monsters by CR or CR Range (with button to get stat blocks)</li>
+                        <li>Roll on over 15 different Random Charts (straight from DMG)</li>
+                        <li>Generate Tavern Names</li>
+                      </ul>
                   </ul>
                 </li>
                 <li><img src="/images/external_link_icon.png" className="icon16"/><a href="https://monsters.cleverorc.com/monsteradvancer">Monster Advancer v2 (3.5)</a>
